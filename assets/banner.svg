@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="50%" stop-color="#161b22" />
+      <stop offset="100%" stop-color="#0a0d12" />
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 38px; fill: #ffffff; }
+    .subtitle { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 20px; fill: #94a3b8; }
+    .badge-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 13px; fill: #38bdf8; }
+    
+    @keyframes pulse {
+      0% { opacity: 0.3; transform: scale(0.98); }
+      50% { opacity: 0.8; transform: scale(1.02); }
+      100% { opacity: 0.3; transform: scale(0.98); }
+    }
+    @keyframes scan {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      50% { opacity: 0.9; }
+      100% { transform: translateY(220px); opacity: 0.2; }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .scanning-line { animation: scan 4s ease-in-out infinite alternate; }
+    .floating-pill { animation: float 6s ease-in-out infinite; }
+    .pulsing-grid { animation: pulse 5s ease-in-out infinite; transform-origin: center; }
+  </style>
+
+  <!-- Dynamic Background Grid -->
+  <rect width="1200" height="320" fill="url(#bg-grad)" rx="16" />
+  <g class="pulsing-grid" opacity="0.15" stroke="#38bdf8" stroke-width="1">
+    <path d="M 0,40 L 1200,40 M 0,80 L 1200,80 M 0,120 L 1200,120 M 0,160 L 1200,160 M 0,200 L 1200,200 M 0,240 L 1200,240 M 0,280 L 1200,280" />
+    <path d="M 100,0 L 100,320 M 200,0 L 200,320 M 300,0 L 300,320 M 400,0 L 400,320 M 500,0 L 500,320 M 600,0 L 600,320 M 700,0 L 700,320 M 800,0 L 800,320 M 900,0 L 900,320 M 1000,0 L 1000,320 M 1100,0 L 1100,320" />
+  </g>
+
+  <!-- Animated Scanning Visual Line in Background -->
+  <line x1="60" y1="50" x2="1140" y2="50" stroke="#818cf8" stroke-width="2" class="scanning-line" filter="url(#glow)" />
+
+  <!-- Background Decorative Inspection Bounding Boxes -->
+  <rect x="920" y="60" width="180" height="180" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="8 4" opacity="0.4" />
+  <rect x="935" y="75" width="60" height="40" fill="#38bdf8" fill-opacity="0.1" stroke="#f43f5e" stroke-width="1.5" />
+  <text x="940" y="90" class="badge-text" fill="#f43f5e" font-size="10">DEFECT: 99.4%</text>
+
+  <!-- Foreground Title and Subtitle Content -->
+  <g transform="translate(80, 110)">
+    <!-- Category Pill -->
+    <rect x="0" y="-35" width="310" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="15" y="-16" class="badge-text">🔍 COMPUTER VISION &amp; ANOMALY DETECTION</text>
+
+    <!-- Main Title -->
+    <text x="0" y="35" class="title">Visual Inspection &amp; Defect Detection</text>
+    <rect x="0" y="48" width="680" height="4" fill="url(#accent-grad)" rx="2" />
+
+    <!-- Subtitle -->
+    <text x="0" y="85" class="subtitle">Curated SaaS Platforms, Industrial AI Tools &amp; Open-Source Frameworks</text>
+  </g>
+</svg>
