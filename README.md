@@ -70,7 +70,7 @@ Welcome to the definitive, SEO-optimized directory of **visual inspection platfo
 
 ## 🔓 Open-Source GitHub Projects 🌐
 
-*Sorted by GitHub Stars Count (Descending)* 🌟
+*Sorted by GitHub_Stars_Count (Descending)* 🌟
 
 - **[Transformers](https://github.com/huggingface/transformers)** [![Stars](https://img.shields.io/github/stars/huggingface/transformers?style=social&color=white)](https://github.com/huggingface/transformers/stargazers)  
   **State-of-the-art Machine Learning for PyTorch, TensorFlow, and JAX**, Apache-2.0 licensed. Contains vision transformers (ViT, Swin, DINOv2) widely used for feature extraction in visual anomaly detection and industrial defect classification. 🤖
@@ -113,7 +113,7 @@ Contributions are welcome! Follow these steps to submit new visual inspection pl
 
 1. 🍴 **Fork** the repository.
 2. 📝 **Add/edit** entries in `README.md` maintaining table/list structure and formatting.
-3. 🔗 Include project title, official website/GitHub link, exact star count badge, license, and brief description.
+3. 🔗 Include project title, official website/GitHub link, exact Stars_Count badge, license, and brief description.
 4. 🚀 Submit a **Pull Request** with a descriptive summary of your changes.
 
 ---
